@@ -1,0 +1,52 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <link rel="stylesheet" href="gg.css" />
+    <h2 id="h2" onmouseover="f1()" onmouseout="f3()" align="center">
+      Contents
+    </h2>
+    <ul type="square">
+      <li><a href="listdata.html" target="right">LISTS</a></li>
+      <li><a href="details.html" target="right">COLLAGE DETAILS</a></li>
+      <li><a href="timetable.html" target="right">TIME TABLE</a></li>
+      <li><a href="images.html" target="right">IMAGES</a></li>
+      <li><a href="h1.html" target="right">JAVASCRIPT</a></li>
+      <select id="jcs">
+      <option value="k"  selected="selected">Choose an  java script application</option>
+      <option value="game">Game</option>
+      <option value="Bill Generation">Bill Generation</option>
+    </select>
+      
+    </ul>
+    <script>
+      function f1() {
+        document.getElementById("h2").innerHTML =
+          "welcome to anits engineering collage";
+      }
+      function f3() {
+        document.getElementById("h2").innerHTML = "Contents";
+      }
+      function f5() {
+        document.getElementById("op1").innerHTML = "hi";
+      }
+     const jcse=document.getElementById("jcs");
+     jcse.addEventListener("change",function()
+     {
+       if(jcse.value=="Bill Generation") {
+           const bill1="bill2.html";
+           parent.right.location.href=bill1;
+
+       }
+       else if(jcse.value=="game") {
+           const g1="gg.html";
+           parent.right.location.href=g1;
+
+       }
+     });
+
+
+    </script>
+  </body>
+</html>

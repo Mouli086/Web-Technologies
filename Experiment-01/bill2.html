@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soda Bill Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Soda Bill</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Item Image</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Lemon</b></td>
+          <td> <img src="lemon.jpg"></td>
+          <td>$35.00</td>
+          <td><input type="number" id="l1" min="0" /></td>
+        </tr>
+        <tr>
+          <td><b>Orange</b></td>
+          <td><img src="orange.jpg"></td>
+          <td>$40.00</td>
+          <td><input type="number" id="l2" min="0" /></td>
+        </tr>
+        <tr>
+          <td><b>Grape</b></td>
+          <td><img src="grape.jpg"></td>
+          <td>$50.00</td>
+          <td><input type="number" id="l3" min="0" /></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+       
+      <label for="total">Total:</label>
+      <input type="text" id="total" readonly />
+      <button onclick="calculateTotal()">Calculate</button>
+      <h1>Order Details</h1>
+      <p id ="p1"> No of Lemon sodas</p>
+      <p id="p2"> No of Orange sodas</p>
+      <p id="p3"> No of Grape sodas</p>  
+      <p id="p4">Total</p>    
+    </div>
+ 
+    <script>
+        
+        function calculateTotal() {
+	let l1= document.getElementById("l1").value;
+	let l2 = document.getElementById("l2").value;
+	let l3 = document.getElementById("l3").value;
+
+	let t1 = l1* 35;
+	let t2 = l2 * 40;
+	let t3= l3* 50;
+    
+	let total = t1+ t2 + t3;
+
+	document.getElementById("total").value = "$" + total.toFixed(2);
+    document.getElementById("p1").textContent="you have selected "+l1+"lemonsodas  :worth"+t1;
+    document.getElementById("p2").textContent="you have selected "+l2+"Orangesodas  :worth"+t2;
+    document.getElementById("p3").textContent="you have selected "+l3+"Grapesodas  :worth"+t3;
+    document.getElementById("p4").textContent="Total Bill Amount:"+total;
+    
+
+}
+
+
+    </script>
+  </body>
+</html>

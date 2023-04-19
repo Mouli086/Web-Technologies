@@ -1,0 +1,32 @@
+body 
+{
+    color:aqua;
+    align:center;
+    background-color:blue;
+
+}
+label {
+    color:aliceblue;
+    text-align:center;
+    padding-left: 200px;
+}
+placeholder {
+    color:blue;
+    padding-top: 2px;
+
+}
+input,select,textarea {
+              border-radius: 7;
+            border-width:25%;
+            border-color: beige;
+            background-color: rgb(228, 219, 215);
+}
+table {
+    align:center
+    padding:10px;
+    spacing:20px;
+}
+.p1 {
+   font-style: oblique;
+   font-size: medium;
+}
